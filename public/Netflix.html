@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/n-logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Movies Tv-Shows </title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .bg-image {
+            background-image: url(images/banner.jpg);
+            background-size: cover;
+            height: 100vh;
+        
+        }
+        .bg-shade {
+            background-color: rgba(0, 0, 0, 0.7 );
+            height: 100vh;
+
+
+        }
+        .brand-title {
+            background-image: url(images/Logonetflix.png);
+            height: 150px;
+            width: 200px;
+            margin-left: 80px;
+            
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        main{
+            margin-top: 150px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main-title{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .main-text{
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        form{
+            font-size: 20px;
+        }
+        input[type="email"]::placeholder {
+            color: white;
+            font-size: 17px;
+        }
+        .bg-image2 {
+            background-color: black;
+            height:70vh;
+        }
+        .title{
+            font-size: 55px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+             
+             margin-left: 200px;
+             padding-top: 200px;
+
+        }
+        .text{
+              font-size: 15px;
+              color: white;
+              margin-top: 20px;
+        }
+        .img{
+            background-image:url(images/NETFLIX_ACCTRANSFER_GIF_EN_US_v1.gif);
+            height: 290px;    
+            width: 450px;  
+            margin-left: 800px; 
+            margin-top: -190px;
+            border-radius: 5%;
+            background-size: cover;
+            background-position: center;
+            
+            
+         } 
+           
+        .background{
+            background-color: black;
+            height: 70vh;
+
+        }
+        .title2{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        .img2{
+            background-image:url(images/tvvv.gif);
+            height: 320px;
+            width: 480px;
+            border-radius: 10px;
+            margin-top: 80px;
+            background-size: cover;
+           
+            
+        }
+        .img2:hover{
+            box-shadow: 1px 1px  30px  gray;
+            
+           
+            transition: 1s;
+            
+
+         }
+        .maintitle{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+        }
+        .textname{
+            font-size: 55px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .bg3{
+            background-color: black;
+            height: 70vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .img3{
+            background-image: url(images/ustv-netfli.gif);
+            height: 320px;
+            width: 480px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+
+
+
+        }
+        .img3:hover{
+            box-shadow: 1px 1px  30px  gray;
+            
+           
+            transition: 1s;
+        }
+        .motha{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .mothatext{
+            font-size: 55px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .bg4{
+            background-color: black;
+            height: 70vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        
+        .motha1{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .img4{
+            background-image: url(images/kids.png);
+            height: 420px;
+            width: 480px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+        }
+    
+       .motha2{
+            font-size: 55px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+       }
+       .btn2{
+        background-color: red;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+       }
+       a{
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+       }
+       .bg5{
+        background-color: black;
+        height: 100vh;
+       }
+       .bt{
+        background-color: red;
+        padding-right: 30px;
+        font-size: 20px;
+        
+       }
+       .accordion{
+        margin: 60px auto;
+        width: 100%;
+        max-width: 1000px;
+       }
+       .accordion li {
+        list-style: none;
+        width: 100%;
+        padding: 5px;
+       }
+       .accordion li label {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        background: #303030;
+        margin-bottom: 2px;
+        cursor: pointer;
+        position: relative;
+
+       }
+       label::after{
+        content: '+';
+        font-size: 34px;
+        position: absolute;
+        right: 20px;
+        transition: transform 0.5s;
+       }
+       input[type="radio"]{
+        display: none;
+       }
+       .accordion .content{
+        background: #303030;
+        text-align: left;
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s; padding: 0.5s;
+       }
+       .accordion input[type="radio"]:checked + label + .content{
+        max-height: 600px;
+        padding: 30px 20px;
+       }
+       .accordion input[type="radio"]:checked + label::after{
+        transform: rotate(135deg);
+
+       }
+       .bg6{
+        background-color: black;
+        height: 60vh;
+       }
+       .p2{
+        margin-left: 570px;
+        font-weight: 500;
+        font-size: 18px;
+       }
+       .maindiv{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 180px;
+        color: #aba8a8;
+        
+    
+
+       }
+       
+    
+       
+       ul{
+        list-style: none;
+        
+       }
+       
+
+      
+
+
+       
+        
+       
+       
+       
+       
+
+
+
+
+
+    </style>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+        function Netflixindex(){
+            return(
+                <div className="bg-image">
+                    <div className="bg-shade">
+                    <NetflixHeader/>
+                    <Netflixmain/>
+                    
+
+                    
+                    
+                    
+
+
+                </div>
+                    </div>
+            )
+        }
+        function NetflixHeader(){
+            return( 
+                <header className="d-flex justify-content-between p-3"> 
+                    <div className="brand-title"></div>
+
+                    <div className="me-5">
+                        <div className="input-group mt-5">
+                            <span className="bi bi-translate input-group-text"></span>
+                            <select className="form-select">
+                                <option>Langauge</option>
+                                <option>Hindi</option>
+                                <option>English</option>
+                                <option>Marathi</option>
+                                </select>
+                                <button className="btn2 ms-2" ><a href="sign-in.html" className="a">Signin</a></button>
+                            </div>
+                        </div>
+                    </header>
+                    
+                    
+            )
+        }
+        function Netflixmain(){
+            return(
+                <main className="text-white text-center">
+                    <div className="main-title"> Unlimited Movies TV shows and more </div>
+                    <div className="main-text"> Starts at ₹149. Cancel anytime. </div>
+                    <Netflixform/>
+                    </main>
+            )
+
+        }
+         function Netflixform(){
+
+            return(
+                <form className="d-flex justify-content-center mt-4">
+                    <div>
+                <p>ready to watch? Enter your email to create or restart your membership. </p>
+                <div className="input-group">
+                    <input type="email" placeholder="Your Email Address" className="form-control bg-dark text-white mt-3 p-3" />
+                    <button className="btn  btn-danger bt mt-3">
+                        Get Started <span className="bi bi-chevron-right"></span>
+                        </button>
+                    </div>
+                    </div>
+                </form>
+            )
+
+
+
+            
+         }
+         function Netflixsection(){
+            return(
+
+            <div className="bg-image2">
+            <Netflixtitle/>
+            </div>
+            
+            )
+         }
+         function Netflixtitle(){
+            return(
+
+                <div className="title">
+
+                <div className="text-white">Enjoy on your TV</div>
+                <div className="text">
+                <p >Watch on smart TVs, PlayStation, Xbox, Chromecast,</p>
+                   <p>  Apple TV, Blu-ray players and more.</p>
+                </div>
+                <div className="img"></div>
+
+                </div>
+            )
+
+         }
+         function Netflixsection2(){
+
+            return(
+                <div className="background">
+                    <Netflixtitle2/>
+                    
+                    
+                    </div>
+            )
+         }
+         function Netflixtitle2(){
+            return(
+
+                <div className="title2">
+                    <div>
+                    <div className="img2"></div>
+                    </div>
+                    <div className="maintitle">
+                        <div className="textname">Download your shows </div>
+                        <div className="textname">to watch offline</div>
+                        <p className="p">Save your favourites easily and always have something to watch.</p>
+                
+                        
+                        </div>
+
+                </div>
+            )
+
+         }
+         function Netflixsection3(){
+            return(
+                    <div className="bg3">
+
+                        <Netflixsec3/>
+                        
+                        </div>
+
+            )
+         }
+         function Netflixsec3(){
+            return(
+
+            <div className="motha">
+                <div className="mothatitle">
+                    <div className="mothatext text-white">Watch everywhere</div>
+                    <p className="text-white">Stream unlimited movies and TV shows on your</p>
+                    <p className="text-white">phone, tablet, laptop, and TV.</p>
+                    
+                    </div>
+                
+                <div className="img3"></div>
+            </div>
+            )
+         }  
+         function Netflixsection4(){
+            return(
+                <div className="bg4">
+                <Netflixsec4/></div>
+            )
+         }
+         function Netflixsec4(){
+            return( 
+                <div className="motha1">
+                <div className="img4"></div>
+                <div className="mothatitle1">
+                <div className="motha2 text-white">Create profiles for kids</div>
+                <p className="text-white">Send children on adventures with their favourite</p>
+                <p className="text-white">characters in a space made just for them—free with</p>
+                <p className="text-white">your membership.</p>
+            </div>
+
+
+            </div>
+            )
+         }
+         function Netflixsection5(){
+            return(
+            <div className="bg5">
+                <Netflixsec5/>
+                
+                </div>
+            )
+         }
+         function Netflixsec5(){
+            return(
+                <div className="faq">
+                    <h1 className="text-center text-white  "><b>Frequently Asked Questions</b></h1>
+                    <ul className="accordion">
+                        <li>
+                            <input type="radio" name="accordion" id="first"/>
+                            <label for="first" className="text-white">What is Netflix?</label>
+                            <div className="content">
+                                <p className="text-white">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, 
+                                    anime, documentaries and more – on thousands of internet-connected devices.
+
+                                   You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always
+                                    something new to discover, 
+                                   and new TV shows and movies are added every week!</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                        <li>
+                            <input type="radio" name="accordion" id="second"/>
+                            <label for="second" className="text-white">How Much does Netflix cost?</label>
+                            <div className="content">
+                                <p className="text-white">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                        <li>
+                            <input type="radio" name="accordion" id="third"/>
+                            <label for="third" className="text-white">Where can i Watch?</label>
+                            <div className="content">
+                                <p className="text-white">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.
+
+                                 You can also download your favourite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                        <li>
+                            <input type="radio" name="accordion" id="fourth"/>
+                            <label for="fourth" className="text-white">How do i Cancel?</label>
+                            <div className="content">
+                                <p className="text-white">Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                        <li>
+                            <input type="radio" name="accordion" id="five"/>
+                            <label for="five" className="text-white">What can i watch on Netflix?</label>
+                            <div className="content">
+                                <p className="text-white">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                       
+                        <li>
+                            <input type="radio" name="accordion" id="seven"/>
+                            <label for="seven" className="text-white">is Netflix good for kids?</label>
+                            <div className="content">
+                                <p className="text-white">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.
+
+Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                                
+                                
+                                </div>
+                            
+                            </li>
+                        
+                        </ul>
+
+                        <div> 
+                        
+                            <form className="d-flex justify-content-center mt-4">
+                    <div>
+                <p className="text-white">Ready to watch? Enter your email to create or restart your membership. </p>
+                <div className="input-group">
+                    <input type="email" placeholder="Your Email Address" className="form-control bg-dark text-white mt-3 p-3" />
+                    <button className="btn  btn-danger bt mt-3">
+                        Get Started <span className="bi bi-chevron-right"></span>
+                        </button>
+                    </div>
+                    </div>
+                </form>
+                            
+                            </div>
+                    </div>
+            )
+               
+            
+         }
+         function Netflixsection6(){
+            return(
+                <div className="bg6">
+                    <Netflixsec6/>
+                    
+                    </div>
+            )
+         }
+         function Netflixsec6(){
+            return(
+                <div> 
+                    
+                    <div className="maindiv">
+                        <div>
+                            <ul className=" ">
+                                <p className="">Questions? Call 000-800-919-1694</p>
+                                <li className="">FAQ</li>
+                                <li>Investor Relations</li>
+                                <li>Speed Test</li>
+                                <li>Privacy</li>
+                                
+                                </ul>
+                            
+                            </div>
+                        <div>
+                            <ul className="">
+                                <li>Ways to Watch</li>
+                                <li>Cookie Preferences</li>
+                                <li>Rubal Wasnik</li>
+                                <li>Legal Notices</li>
+                                
+                                </ul>
+                            
+                            </div>
+                        <div>
+                            <ul className="">
+                                <li>Cookie Preferences</li>
+                                <li>Account</li>
+                                <li>Help Centre</li>
+                                <li>Media Centre</li>
+                                
+                                </ul>
+                            
+                            </div>
+                        <div>
+                            <ul className="">
+                                <li>Contact Us</li>
+                                <li>Privacy</li>
+                                <li>Only on Netflix</li>
+                                <li>Rubal Wasnik  </li>
+                                
+                                </ul>
+                            
+                            </div>
+                         
+                        </div>
+                        
+                        
+                    
+                    
+                    </div>
+            )
+         }
+
+
+
+
+
+
+
+
+         
+         
+  
+
+
+         
+ 
+
+
+        
+         
+
+        
+
+
+
+
+
+        ReactDOM.render(<Netflixindex/> , document.getElementById("root"));
+        ReactDOM.render(<Netflixsection/> , document.getElementById("root2"));
+        ReactDOM.render(<Netflixsection2/> , document.getElementById("main"));
+        ReactDOM.render(<Netflixsection3/> , document.getElementById("root3"));
+        ReactDOM.render(<Netflixsection4/> , document.getElementById("root4"));
+        ReactDOM.render(<Netflixsection5/> , document.getElementById("root5"));
+        ReactDOM.render(<Netflixsection6/> , document.getElementById("root6"));
+    </script>
+</head>
+<body>
+    <noscript>please Unble to javascript On Your Browser Setting !</noscript>
+    <div id="root"></div>
+    <div id="root2"></div>
+    <div id="main"></div>
+    <div id="root3"></div>
+    <div id="root4"> </div>
+    <div id="root5"> </div>
+    <div id="root6"> </div>
+    
+</body>
+</html>

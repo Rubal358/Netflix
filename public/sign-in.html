@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="images/n-logo.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Movies Tv-Shows </title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .bg-image{
+            background-image: url(images/banner.jpg);
+            background-size: cover;
+            height: 62.5rem;
+        }
+        .bg-shade{
+            background-color: rgba(0, 0, 0, 0.7 );
+            height: 62.5rem;
+        }
+        .brand-title {
+            background-image: url(images/Logonetflix.png);
+            height: 150px;
+            width: 200px;
+            margin-left: 80px;
+            
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 600px;
+         width: 450px;
+         background: transparent;
+         border-radius: 10px;
+         border: 1px solid white;
+        
+        
+        }
+        .mainheader{
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .input1{
+            height: 50px;
+            width: 300px;
+            background: transparent;
+            border: 2px solid gray;
+            border-radius: 7px;
+            margin-top: 20px;
+        
+        }
+        .input1[type="text"]::placeholder {
+            color: white;
+            font-size: 18px;
+            
+            padding: 20px;
+        }
+        .input1[type="password"]::placeholder {
+            color: white;
+            font-size: 18px;
+            
+            padding: 20px;
+        }
+        .login{
+            margin-left: px;
+        }
+        .btn{
+            height: 50px;
+            width:300px;
+            font-weight: bold;
+            color: white;
+            margin-top: 20px;
+            background-color: red;
+        }
+        .btn:hover{
+            border: 1px solid red;
+        }
+        .btn2{
+            height: 50px;
+            width:300px;
+            font-weight: bold;
+            color: white;
+            margin-top: 13px;
+            background: transparent;
+            border: 2px solid gray;
+        }
+        .btn2:hover{
+            background-color: white;
+            color: black;
+        }
+        .text1{
+            font-size: 17px;
+            color: gray;
+            font-weight: 500;
+        }
+        .p1{
+            margin-left: 140px;
+        }
+        
+       
+       
+
+
+
+
+
+    </style>
+    <script src="../node_modules/react/umd/react.development.js"></script>
+    <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script src="../node_modules/@babel/standalone/babel.js"></script>
+    <script type="text/babel">
+        function check() {
+            var email = document.getElementById("email").value;
+            var error = document.getElementById("emailerror");
+            
+            if (email.endsWith('gmail.com')) {
+                error.innerHTML = "";
+            } else {
+                error.innerHTML = "Enter Your Valid Email..!".fontcolor("red");
+                
+                
+            }
+        }
+        function NameBlur(){
+            var name = document.getElementById("username").value;
+            var error = document.getElementById("pass");
+            if(name.charCodeAt("0")>65 && name.charCodeAt("0")<90){
+                error.innerHTML = "";
+            }
+            else{
+                error.innerHTML = "Password Must Start With Upparcase !" .fontcolor('red')
+            }
+        }
+    
+        function Netflixindex() {
+            return (
+                <div className="bg-image">
+                    <div className="bg-shade">
+                        <NetflixHeader />
+                        <Netflixmain />
+                    </div>
+                </div>
+            )
+        }
+    
+        function NetflixHeader() {
+            return (
+                <header className="d-flex justify-content-between p-3">
+                    <div className="brand-title"></div>
+                </header>
+            )
+        }
+    
+        function Netflixmain() {
+            return (
+                <div>
+                    <div className="container">
+                        <Netflixchotamain />
+                    </div>
+                </div>
+            )
+        }
+    
+        function Netflixchotamain() {
+            return (
+                <div className="login text-white">
+                    <h1>Sign in </h1>
+                    <input className="input1 text-white" onBlur={check} id="email" type="text" placeholder="Email or Phone Number" />
+                    <dd id="emailerror" className="mt-2"></dd>
+                    <input className="input1 text-white" type="password" onBlur={NameBlur} id="username" placeholder="Password"/>
+                    <dd id="pass"></dd>
+                    <button className="btn">Sign In</button>
+                    <p className="mt-4 p1">OR</p>
+                    <button className="btn2"> use a sign-in code</button>
+                    <p className="forget mt-4">Forget Password ?</p>
+                    <div className="form-check">
+                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label className="form-check-label" htmlFor="flexCheckDefault">Remember me</label>
+                    </div>
+                    <div className="text1 ">New to Netflix? <span className="text2 text-white ms-2"> Sign up now.</span> </div>
+                </div>
+            )
+        }
+    
+        ReactDOM.render(<Netflixindex />, document.getElementById("root"));
+    </script>
+    
+</head>
+<body>
+    <noscript>please Unble to javascript On Your Browser Setting !</noscript>
+    <div id="root"></div>
+    
+    
+</body>
+</html>
